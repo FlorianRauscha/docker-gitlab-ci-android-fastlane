@@ -3,7 +3,7 @@ Docker Container for building and testing Android Applications on GitLab CI
 
 ## Description
 
-This docker image is inspired by [ekreative/android-docker](https://github.com/ekreative/android-docker) and [peterturza/gitlab-ci-android-fastlane](https://github.com/peterturza/gitlab-ci-android-fastlane).
+This docker image was inspired by [ekreative/android-docker](https://github.com/ekreative/android-docker) and [peterturza/gitlab-ci-android-fastlane](https://github.com/peterturza/gitlab-ci-android-fastlane).
 
 ## Example .gitlab-ci.yml
 
