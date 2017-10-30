@@ -1,14 +1,10 @@
-#!/usr/bin/expect -f
+#!/bin/bash
 
-set timeout 1800
-set cmd [lindex $argv 0]
-set licenses [lindex $argv 1]
-
-spawn {*}$cmd
-expect {
-  "Accept\? \(y/N\)" {
-        exp_send "y\r"
-        exp_continue
+/usr/bin/expect -c '
+set timeout -1;
+spawn sdkmanager --licenses;
+  expect {
+    "y/N" { exp_send "y\r" ; exp_continue }
+    eof
   }
-  eof
-}
+'

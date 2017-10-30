@@ -66,8 +66,8 @@ RUN cd /opt \
 # Install custom tools
 COPY tools /opt/tools
 
-# Install Android platform and things
-RUN android-accept-licenses "sdkmanager --verbose \"platform-tools\" \"emulator\" \"platforms;android-$ANDROID_PLATFORM_VERSION_26\" \"platforms;android-$ANDROID_PLATFORM_VERSION_25\" \"build-tools;$ANDROID_BUILD_TOOLS_VERSION\" $ANDROID_EXTRA_PACKAGES $ANDROID_REPOSITORIES $ANDROID_CONSTRAINT_PACKAGES $ANDROID_EMULATOR_X86 $ANDROID_EMULATOR_ARM"
+# Accept Licenses
+RUN android-accept-licenses
 
 # Create Emulator
 # android-avdmanager-create "avdmanager create avd --package \"$ANDROID_EMULATOR_X86\" --name test --abi \"$ANDROID_ABI_X86\""
